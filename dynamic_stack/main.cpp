@@ -34,10 +34,10 @@ void menu(int value) {
     stack myStack(value);
 
     while (true) {
-        std::cout << std::endl << std::setfill('=') << std::setw(29) << '\n';
-        std::cout << "Last status: " << status << std::endl;
-        std::cout << "Stack capacity: " << myStack.getCapacity() << std::endl;
-        std::cout << "Size: " << myStack.getSize() << std::endl;
+        std::cout << '\n' << std::setfill('=') << std::setw(29) << '\n';
+        std::cout << "Last status: " << status << '\n';
+        std::cout << "Stack capacity: " << myStack.getCapacity() << '\n';
+        std::cout << "Size: " << myStack.getSize() << '\n';
         std::cout << std::setfill('=') << std::setw(29) << '\n';
         std::cout << "Choose a option:\n";
         std::cout << "1 - Add element\n";
@@ -55,12 +55,12 @@ void menu(int value) {
                 myStack.push(value, statusPtr);
                 break;
             case 2:
-                std::cout << "\nItem removed: " << myStack.pop(statusPtr) << std::endl;
+                std::cout << "\nItem removed: " << myStack.pop(statusPtr) << '\n';
                 break;
             case 3:
-                std::cout << std::endl << std::setfill('-') << std::setw(29) << '\n';
+                std::cout << '\n' << std::setfill('-') << std::setw(29) << '\n';
                 myStack.show(statusPtr);
-                std::cout << std::endl << std::setfill('-') << std::setw(29) << '\n';
+                std::cout << '\n' << std::setfill('-') << std::setw(29) << '\n';
                 break;
             case 0:
                 std::cout << "\nFinished program!\n";
