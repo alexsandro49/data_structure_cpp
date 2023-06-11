@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "queue.h"
+#include "stack.h"
 
 void menu(int value);
 
@@ -9,12 +9,12 @@ int main()
     int capacity;
 
     std::cout << std::setfill('=') << std::setw(29) << '\n';
-    std::cout << std::string(12, ' ') << "QUEUE\n";
+    std::cout << std::string(12, ' ') << "STACK\n";
     std::cout << std::setfill('=') << std::setw(29) << '\n';
 
     do
     {
-        std::cout << "\nSet the queue capacity: ";
+        std::cout << "\nSet the stack capacity: ";
         std::cin >> capacity;
 
         if (capacity < 1) {
@@ -31,13 +31,13 @@ void menu(int value) {
     int option;
     std::string status = "----";
     std::string* statusPtr = &status;
-    queue myqueue(value);
+    stack myStack(value);
 
     while (true) {
-        std::cout << '\n' << std::setfill('=') << std::setw(29) << '\n';
-        std::cout << "Last status: " << status << '\n';
-        std::cout << "Queue capacity: " << myqueue.getCapacity() << '\n';
-        std::cout << "Size: " << myqueue.getSize() << '\n';
+        std::cout << std::endl << std::setfill('=') << std::setw(29) << '\n';
+        std::cout << "Last status: " << status << std::endl;
+        std::cout << "Stack capacity: " << myStack.getCapacity() << std::endl;
+        std::cout << "Size: " << myStack.getSize() << std::endl;
         std::cout << std::setfill('=') << std::setw(29) << '\n';
         std::cout << "Choose a option:\n";
         std::cout << "1 - Add element\n";
@@ -52,15 +52,15 @@ void menu(int value) {
                 int value;
                 std::cout << "\nEnter an integer to add: ";
                 std::cin >> value;
-                myqueue.push(value, statusPtr);
+                myStack.push(value, statusPtr);
                 break;
             case 2:
-                std::cout << "\nItem removed: " << myqueue.pop(statusPtr) << '\n';
+                std::cout << "\nItem removed: " << myStack.pop(statusPtr) << std::endl;
                 break;
             case 3:
-                std::cout << '\n' << std::setfill('-') << std::setw(29) << '\n';
-                myqueue.show(statusPtr);
-                std::cout << '\n' << std::setfill('-') << std::setw(29) << '\n';
+                std::cout << std::endl << std::setfill('-') << std::setw(29) << '\n';
+                myStack.show(statusPtr);
+                std::cout << std::endl << std::setfill('-') << std::setw(29) << '\n';
                 break;
             case 0:
                 std::cout << "\nFinished program!\n";
