@@ -34,10 +34,10 @@ void menu(int value) {
     queue myQueue(value);
 
     while (true) {
-        std::cout << '\n' << std::setfill('=') << std::setw(29) << '\n';
-        std::cout << "Last status: " << status << '\n';
-        std::cout << "Queue capacity: " << myqueue.getCapacity() << '\n';
-        std::cout << "Size: " << myqueue.getSize() << '\n';
+        std::cout << std::endl << std::setfill('=') << std::setw(29) << '\n';
+        std::cout << "Last status: " << status << std::endl;
+        std::cout << "Queue capacity: " << myQueue.getCapacity() << std::endl;
+        std::cout << "Size: " << myQueue.getSize() << std::endl;
         std::cout << std::setfill('=') << std::setw(29) << '\n';
         std::cout << "Choose a option:\n";
         std::cout << "1 - Add element\n";
@@ -55,12 +55,12 @@ void menu(int value) {
                 myQueue.push(value, statusPtr);
                 break;
             case 2:
-                std::cout << "\nItem removed: " << myqueue.pop(statusPtr) << '\n';
+                std::cout << "\nItem removed: " << myQueue.pop(statusPtr) << std::endl;
                 break;
             case 3:
-                std::cout << '\n' << std::setfill('-') << std::setw(29) << '\n';
+                std::cout << std::endl << std::setfill('-') << std::setw(29) << '\n';
                 myQueue.show(statusPtr);
-                std::cout << '\n' << std::setfill('-') << std::setw(29) << '\n';
+                std::cout << std::endl << std::setfill('-') << std::setw(29) << '\n';
                 break;
             case 0:
                 std::cout << "\nFinished program!\n";
