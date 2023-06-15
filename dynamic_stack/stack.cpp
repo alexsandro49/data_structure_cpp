@@ -7,16 +7,6 @@ stack::stack(int value) {
     this->head = nullptr;
 }
 
-stack::~stack() {
-    node* current = head;
-
-    while (current != nullptr) {
-        node* nextNode = current->getNext();
-        delete current;
-        current = nextNode;
-    }
-}
-
 int stack::getCapacity() {
     return capacity;
 }

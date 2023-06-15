@@ -7,10 +7,6 @@ queue::queue(int value) {
     this->elements = new int[capacity];
 }
 
-queue::~queue() {
-    delete[] elements;
-}
-
 int queue::getCapacity() {
     return capacity;
 }

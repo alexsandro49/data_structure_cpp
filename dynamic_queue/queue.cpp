@@ -7,16 +7,6 @@ queue::queue(int value) {
     this->head = nullptr;
 }
 
-queue::~queue() {
-    node* current = head;
-
-    while (current != nullptr) {
-        node* nextNode = current->getNext();
-        delete current;
-        current = nextNode;
-    }
-}
-
 int queue::getCapacity() {
     return capacity;
 }

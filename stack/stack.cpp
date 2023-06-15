@@ -7,10 +7,6 @@ stack::stack(int value) {
     this->elements = new int[capacity];
 }
 
-stack::~stack() {
-    delete[] elements;
-}
-
 int stack::getCapacity() {
     return capacity;
 }

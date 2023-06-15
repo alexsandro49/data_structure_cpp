@@ -8,8 +8,6 @@ class queue {
     public:
         queue(int value);
 
-        ~queue();
-
         int getCapacity();
 
         int getSize();

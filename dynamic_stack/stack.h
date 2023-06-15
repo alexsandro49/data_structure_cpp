@@ -9,8 +9,6 @@ class stack
     public:
         stack(int value);
 
-        ~stack();
-
         int getCapacity();
 
         int getSize();
