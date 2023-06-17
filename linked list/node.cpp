@@ -13,6 +13,6 @@ node* node::getNext() {
     return next;
 }
 
-void node::setNext(node* nextnode) {
-    next = nextnode;
+void node::setNext(node* nextNode) {
+    next = nextNode;
 }

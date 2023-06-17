@@ -10,5 +10,5 @@ class node
 
         node* getNext();
 
-        void setNext(node* nextnode);
+        void setNext(node* nextNode);
 };
