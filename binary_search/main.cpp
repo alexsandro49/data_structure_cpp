@@ -3,7 +3,7 @@
 #include <vector>
 #include <ctime>
 #include <algorithm>
-#include "binary_search.cpp"
+#include "Binary_search.cpp"
 
 int main() {
     std::cout << std::setfill('=') << std::setw(22) << '\n';
@@ -77,7 +77,7 @@ int main() {
 
 
         std::cout << '\n' << std::setfill('=') << std::setw(14) << '\n';
-        std::cout << (binary_search(myVector, capacity, target) ? "Value found!\n" : "Value not found!\n");
+        std::cout << (Binary_search(myVector, capacity, target) ? "Value found!\n" : "Value not found!\n");
         std::cout << std::setfill('=') << std::setw(14) << '\n';
     }
 

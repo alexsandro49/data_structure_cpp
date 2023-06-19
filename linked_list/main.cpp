@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "linked_list.h"
+#include "Linked_list.h"
 
 int main()
 {
@@ -8,8 +8,8 @@ int main()
     std::cout << std::string(5, ' ') << "LINKED LIST\n";
     std::cout << std::setfill('=') << std::setw(22) << '\n';
 
-    linked_list myList;
-    node* currentNode = myList.getHead();
+    Linked_list myList;
+    Node* currentNode = myList.getHead();
     std::string currentValue, nextValue;
 
     int option, position;

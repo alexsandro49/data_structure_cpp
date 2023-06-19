@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "stack.h"
+#include "Stack.h"
 
 void menu(int value);
 
@@ -31,7 +31,7 @@ void menu(int value) {
     int option;
     std::string status = "----";
     std::string* statusPtr = &status;
-    stack myStack(value);
+    Stack myStack(value);
 
     while (true) {
         std::cout << std::endl << std::setfill('=') << std::setw(29) << '\n';

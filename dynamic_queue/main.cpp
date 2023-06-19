@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "queue.h"
+#include "Queue.h"
 
 void menu(int value);
 
@@ -31,7 +31,7 @@ void menu(int value) {
     int option;
     std::string status = "----";
     std::string* statusPtr = &status;
-    queue myQueue(value);
+    Queue myQueue(value);
 
     while (true) {
         std::cout << '\n' << std::setfill('=') << std::setw(29) << '\n';

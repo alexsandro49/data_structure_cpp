@@ -1,21 +1,21 @@
 #include <iostream>
-#include "queue.h"
+#include "Queue.h"
 
-queue::queue(int value) {
+Queue::Queue(int value) {
     this->capacity = value;
     this->size = 0;
     this->elements = new int[capacity];
 }
 
-int queue::getCapacity() {
+int Queue::getCapacity() {
     return capacity;
 }
 
-int queue::getSize() {
+int Queue::getSize() {
     return size;
 }
 
-void queue::push(int value, std::string* ptr) {
+void Queue::push(int value, std::string* ptr) {
     if (size < capacity) {
         elements[size] = value;
         *ptr = "Item Added";
@@ -25,7 +25,7 @@ void queue::push(int value, std::string* ptr) {
     }
 }
 
-int queue::pop(std::string* ptr) {
+int Queue::pop(std::string* ptr) {
     int value;
     int x[size];
 
@@ -50,7 +50,7 @@ int queue::pop(std::string* ptr) {
     return value;
 }
 
-void queue::show(std::string* ptr) {
+void Queue::show(std::string* ptr) {
     if (size > 0) {
         for (int i = 0; i < size; i++) {
             std::cout << elements[i] << ' ';

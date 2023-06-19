@@ -1,33 +1,34 @@
-#include "linked_list.h"
+#include "Doubly_linked_list.h"
 
-linked_list::linked_list() {
+Doubly_linked_list::Doubly_linked_list() {
     this->size = 0;
     this->head = nullptr;
 }
 
-node* linked_list::getHead() {
+Node* Doubly_linked_list::getHead() {
     return head;
 }
 
-int linked_list::getSize() {
+int Doubly_linked_list::getSize() {
     return size;
 }
 
-void linked_list::push(int value, node* currentNode) {
-    node* newNode = new node(value);
+void Doubly_linked_list::push(int value, Node* currentNode) {
+    Node* newNode = new Node(value);
 
     if (head == nullptr) {
         head = newNode;
     } else {
-        node* temp = currentNode->getNext();
+        Node* temp = currentNode->getNext();
         currentNode->setNext(newNode);
         currentNode->getNext()->setNext(temp);
+        currentNode->getNext()->setPrevious(currentNode);
     }
     
     size++;
 }
 
-void linked_list::pop(node* nodeToRemove) {
+void Doubly_linked_list::pop(Node* nodeToRemove) {
     if (head == nullptr) {
         return;
     }
@@ -36,8 +37,8 @@ void linked_list::pop(node* nodeToRemove) {
         head = head->getNext();
         delete nodeToRemove;
     } else {
-        node* previousNode = nullptr;
-        node* currentNode = head;
+        Node* previousNode = nullptr;
+        Node* currentNode = head;
 
         while (currentNode != nullptr && currentNode != nodeToRemove) {
             previousNode = currentNode;

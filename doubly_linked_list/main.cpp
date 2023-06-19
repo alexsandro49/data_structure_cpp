@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "doubly_linked_list.h"
+#include "Doubly_linked_list.h"
 
 int main()
 {
@@ -8,8 +8,8 @@ int main()
     std::cout << std::string(2, ' ') << "DOUBLY LINKED LIST\n";
     std::cout << std::setfill('=') << std::setw(23) << '\n';
 
-    doubly_linked_list myList;
-    node* currentNode = myList.getHead();
+    Doubly_linked_list myList;
+    Node* currentNode = myList.getHead();
     std::string currentValue, nextValue, previousValue;
 
     int option, position;

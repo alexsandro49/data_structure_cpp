@@ -1,12 +1,13 @@
 #include <iostream>
+#include "Node.h"
 
-class queue {
+class Queue 
+{
     private:
         int capacity, size;
-        int* elements;
-
+        Node* head;
     public:
-        queue(int value);
+        Queue(int value);
 
         int getCapacity();
 

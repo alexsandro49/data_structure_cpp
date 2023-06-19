@@ -1,12 +1,13 @@
 #include <iostream>
+#include "Node.h"
 
-class stack {
+class Stack 
+{
     private:
         int capacity, size;
-        int* elements;
-
+        Node* head;
     public:
-        stack(int value);
+        Stack(int value);
 
         int getCapacity();
 

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-bool binary_search(std::vector<int> myVector, int size, int target) {
+bool Binary_search(std::vector<int> myVector, int size, int target) {
     int left = 0;
     int right = size - 1;
 

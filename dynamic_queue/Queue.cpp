@@ -1,31 +1,31 @@
 #include <iostream>
-#include "stack.h"
+#include "Queue.h"
 
-stack::stack(int value) {
+Queue::Queue(int value) {
     this->capacity = value;
     this->size = 0;
     this->head = nullptr;
 }
 
-int stack::getCapacity() {
+int Queue::getCapacity() {
     return capacity;
 }
 
-int stack::getSize() {
+int Queue::getSize() {
     return size;
 }
 
-void stack::push(int value, std::string* ptr) {
-    node* newNode = new node(value);
+void Queue::push(int value, std::string* ptr) {
+    Node* newNode = new Node(value);
 
     if (head == nullptr) {
         head = newNode;
         *ptr = "Item Added";
     } else {
         if (size == capacity) {
-            *ptr = "The stack is full!";
+            *ptr = "The queue is full!";
         } else {
-            node* current = head;
+            Node* current = head;
 
             while (current->getNext() != nullptr) {
                 current = current->getNext();
@@ -38,11 +38,11 @@ void stack::push(int value, std::string* ptr) {
     size++;
 }
 
-int stack::pop(std::string* ptr) {
+int Queue::pop(std::string* ptr) {
     int value;
 
     if (head == nullptr) {
-        *ptr = "The stack is empty!";
+        *ptr = "The queue is empty!";
         size = 0;
         return -1;
     }
@@ -52,14 +52,10 @@ int stack::pop(std::string* ptr) {
         delete head;
         head = nullptr;
     } else {
-        node* current = head;
-        while (current->getNext()->getNext() != nullptr) {
-            current = current->getNext();
-        }
-
-        value = current->getNext()->getValue();
-        delete current->getNext();
-        current->setNext(nullptr);
+        Node* current = head;
+        
+        value = head->getValue();
+        head = current->getNext();
     }
 
     size--;
@@ -67,8 +63,8 @@ int stack::pop(std::string* ptr) {
     return value;
 }
 
-void stack::show(std::string* ptr) {
-    node* current = head;
+void Queue::show(std::string* ptr) {
+    Node* current = head;
 
     if (size > 0) {
         while (current != nullptr) {
@@ -77,6 +73,6 @@ void stack::show(std::string* ptr) {
         }
         *ptr = "Displayed items";
     } else {
-        *ptr = "The stack is empty!";
+        *ptr = "The queue is empty!";
     }
 }
