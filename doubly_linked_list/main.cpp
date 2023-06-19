@@ -4,9 +4,9 @@
 
 int main()
 {
-    std::cout << std::setfill('=') << std::setw(22) << '\n';
-    std::cout << std::string(5, ' ') << "LINKED LIST\n";
-    std::cout << std::setfill('=') << std::setw(22) << '\n';
+    std::cout << std::setfill('=') << std::setw(23) << '\n';
+    std::cout << std::string(2, ' ') << "DOUBLY LINKED LIST\n";
+    std::cout << std::setfill('=') << std::setw(23) << '\n';
 
     doubly_linked_list myList;
     node* currentNode = myList.getHead();
